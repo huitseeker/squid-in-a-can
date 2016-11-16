@@ -47,7 +47,7 @@ def main():
     arbitrary_squid_directives = os.getenv("SQUID_DIRECTIVES", None)
 
     squid_conf_entries = []
-    squid_conf_entries.append('http_port 3129 intercept')
+    squid_conf_entries.append('http_port 0.0.0.0:3129 intercept')
     squid_conf_entries.append('maximum_object_size %s MB' % max_object_size)
     squid_conf_entries.append('cache_dir ufs /var/cache/squid3 %s 16 256' %
                               disk_cache_size)
