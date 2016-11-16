@@ -11,8 +11,8 @@ services:
           - "DISK_CACHE_SIZE=5000"
           - "MAX_CACHE_OBJECT=1000"
           - "PARENT_PROXY_HOST=upstream.proxy.host"
-          - "PARENT_PROXY_PORT=8080"
-          - "PARENT_PROXY_USERNAME=user"
+          - "PARENT_PROXY_PORT=3128"
+          - "PARENT_PROXY_USERNAME"
           # Base64 encoded password take from .env
           - "PARENT_PROXY_PASSWORD"
           # - "SQUID_DIRECTIVES_ONLY=true"
