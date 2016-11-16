@@ -5,6 +5,7 @@ RUN apt-get -q update && \
     rm -rf /var/lib/apt/lists/*
 RUN sed -i "s/^#acl localnet/acl localnet/" /etc/squid3/squid.conf
 RUN sed -i "s/^#http_access allow localnet/http_access allow localnet/" /etc/squid3/squid.conf
+RUN sed -i "s/^http_port 3128/http_port 0.0.0.0:3128/" /etc/squid3/squid.conf
 RUN mkdir -p /var/cache/squid3
 RUN mv /etc/squid3/squid.conf /etc/squid3/squid.conf.in
 RUN chown -R proxy:proxy /var/cache/squid3
